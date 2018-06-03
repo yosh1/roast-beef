@@ -1,7 +1,10 @@
 package com.example.yoshi1125hisa.roastbeefapp;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.CountDownTimer;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,11 +23,17 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     private TextView timerText;
     EditText numberText;
     private SimpleDateFormat dataFormat = new SimpleDateFormat("mm:ss.SSS", Locale.US);
+
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference refMsg;
+    EditText telNumText;
+    Button mPostButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +51,13 @@ public class MainActivity extends AppCompatActivity {
         // インターバル
         long interval = 10;
 
-        Button postButton = findViewById(R.id.mPostButton);
+        Button postButton;
         Button startButton = findViewById(R.id.start_button);
         Button stopButton = findViewById(R.id.stop_button);
-
         postButton = findViewById(R.id.post);
+
+        refMsg = database.getReference("tel");
+        telNumText = findViewById(R.id.telNumText);
 
 
         timerText = findViewById(R.id.timer);
@@ -77,7 +88,30 @@ public class MainActivity extends AppCompatActivity {
         postButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                int id = v.getId();
 
+                switch (id) {
+                    case R.id.post:
+                        String getTelNum = telNumText.getText().toString();
+                        final Post post = new Post(getTelNum);
+
+
+                        //childを見に行く。
+                        //そして次のActivityに送る。
+
+                        refMsg.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                //Log.d("ondatachange", dataSnapshot.getRef().push().getKey().toString());
+                            }
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
+
+                            }
+                        });
+                        refMsg.push().setValue(post);
+                        break;
+                }
             }
         }
     );
@@ -102,7 +136,8 @@ public class MainActivity extends AppCompatActivity {
             long mm = millisUntilFinished / 1000 / 60;
             long ss = millisUntilFinished / 1000 % 60;
            long ms = millisUntilFinished - ss * 1000 - mm * 1000 * 60;
-            timerText.setText(String.format("%1$02d:%2$02d.%3$03d", mm, ss, ms));
+            timerText.setText(String.format("%1$02d:%2$02d.%3$03d", mm, ss, ms
+            ));
             timerText.setText(dataFormat.format(millisUntilFinished));
 
         }
@@ -110,8 +145,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void look(View v){
-
- Intent intent = new Intent(this,TelListActivity.class);
+        Intent intent = new Intent(this,TelListActivity.class);
         startActivity(intent);
     }
+
 }
