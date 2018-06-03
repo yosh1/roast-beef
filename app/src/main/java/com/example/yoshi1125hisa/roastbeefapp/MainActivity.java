@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity{
 
     private TextView timerText;
     EditText numberText;
-    private SimpleDateFormat dataFormat = new SimpleDateFormat("mm:ss.SSS", Locale.US);
+    private SimpleDateFormat dataFormat = new SimpleDateFormat("mm"/*:ss.SSS*/, Locale.US);
 
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -47,7 +47,8 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
 
         // sm　これをFirebaseでとってきたい。
-        long countNumber = 180000;
+        //180 = 3 ... 120 * 60 = 120
+        long countNumber = 120 * 60 * 1000;
         // インターバル
         long interval = 10;
 
@@ -136,9 +137,8 @@ public class MainActivity extends AppCompatActivity{
             long mm = millisUntilFinished / 1000 / 60;
             long ss = millisUntilFinished / 1000 % 60;
            long ms = millisUntilFinished - ss * 1000 - mm * 1000 * 60;
-            timerText.setText(String.format("%1$02d:%2$02d.%3$03d", mm, ss, ms
-            ));
-            timerText.setText(dataFormat.format(millisUntilFinished));
+            timerText.setText(String.format("%1$02d"/*:%2$02d.%3$03d*/, mm/*, ss, ms*/));
+            timerText.setText(dataFormat.format(millisUntilFinished)+"分");
 
         }
 
