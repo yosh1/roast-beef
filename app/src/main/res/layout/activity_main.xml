@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#BE2E2E"
+    android:focusableInTouchMode="true"
+    android:id="@+id/relativeLayout"
     tools:context=".MainActivity">
 
 
@@ -15,11 +17,11 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="463dp"
-        android:text="00:00"
+        android:text="00分"
         android:textColor="@android:color/white"
         android:textSize="120sp" />
 
-    <Button
+    <!--Button
         android:id="@+id/start_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:text="stop" />
+        android:text="stop" /-->
 
     <ImageView
         android:id="@+id/imageView"
@@ -66,38 +68,24 @@
         android:text="登録した電話番号を確認する"
         android:textColor="@android:color/white"
         android:textSize="20sp" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/postButton"/>
+    <EditText
+        android:id="@+id/telNumText"
+        android:layout_width="500dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
+        android:layout_marginBottom="257dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="追加したい電話番号を入力してください"
+        android:inputType="phone"
+        android:textColor="@android:color/white"
+        android:textSize="25sp" />
 
-        <EditText
-            android:id="@+id/numberText"
-            android:layout_width="500dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="267dp"
-            android:layout_marginStart="33dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="追加したい電話番号を入力してください"
-            android:inputType="phone"
-            android:textColor="@android:color/white"
-            android:textSize="25sp" />
 
-        <Button
-            android:id="@+id/post"
-            android:layout_width="69dp"
-            android:layout_height="38dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="74dp"
-            android:layout_weight="1"
-            android:background="@drawable/beforepush"
-            android:text="送信" />
-    </LinearLayout>
 </RelativeLayout>
