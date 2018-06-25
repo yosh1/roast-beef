@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TelListActivity">
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="電話番号が登録されていません"
+        />
 
     <ListView
         android:id="@+id/listView"
-        style="@style/Widget.AppCompat.Light.ListView.DropDown"
+        style="@android:style/Widget.DeviceDefault.Light.ExpandableListView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:divider="#0022ff" />
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:divider="#0022ff"
+        android:visibility="visible"></ListView>
 </RelativeLayout>

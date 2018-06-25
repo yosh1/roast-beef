@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.yoshi1125hisa.roastbeefapp">
+    package="com.developer.yoshi1125hisa.roastbeefapp">
 
 
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon_square"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/icon_square"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-        <activity android:name=".MainActivity">
+        <activity android:name="com.developer.yoshi1125hisa.roastbeef.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PostActivity" />
-        <activity android:name=".TelListActivity"/>
+        <activity android:name="com.developer.yoshi1125hisa.roastbeef.TelListActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET"/>

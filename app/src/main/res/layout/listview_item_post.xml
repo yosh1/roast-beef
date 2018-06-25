@@ -7,42 +7,31 @@
 
 
     <TextView
-        android:id="@+id/username"
+        android:id="@+id/telNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:layout_weight="1"
-        android:text="UserName"
-        android:textSize="14sp" />
-
-
-    <!--TextView
-        android:id="@+id/realInchX"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        android:layout_weight="1"
-        android:text="realInchX"
+        android:text=""
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/realInchY"
+        android:id="@+id/cooking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:layout_weight="1"
-        android:text="realInchY"
+        android:text=""
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/realInch"
+        android:id="@+id/wilEndAt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:layout_weight="1"
-        android:text="realInch"
-        android:textSize="14sp" /-->
-
+        android:text=""
+        android:textSize="14sp" />
 
 
 </LinearLayout>

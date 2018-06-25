@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">RoastBeefApp</string>
+    <string name="app_name">RoastBeef</string>
+    <string name="waiting_cooking">料理開始待ち</string>
 </resources>

@@ -1,9 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.yoshi1125hisa.roastbeefapp"
+        applicationId "com.developer.yoshi1125hisa.roastbeef"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
@@ -20,15 +20,22 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'com.google.firebase:firebase-core:16.0.0'
+    implementation 'com.google.firebase:firebase-core:16.0.1'
     implementation 'com.firebase:firebase-client-android:2.5.0'
-    implementation 'com.google.firebase:firebase-auth:16.0.1'
+    implementation 'com.google.firebase:firebase-auth:16.0.2'
     implementation 'com.google.android.gms:play-services-auth:15.0.1'
     implementation 'com.google.firebase:firebase-database:16.0.1'
+    implementation 'com.muddzdev:styleabletoast:2.1.2'
+    def supportLibVersion = '26.1.0'
+    implementation 'com.android.support:appcompat-v7:' + supportLibVersion
+    implementation 'com.android.support:support-v4:'   + supportLibVersion
+    implementation 'com.android.support:design:'       + supportLibVersion
+    implementation 'com.firebaseui:firebase-ui-database:1.0.1'
+    implementation 'net.danlew:android.joda:2.9.2'
+    implementation 'info.vividcode:date-format-iso8601:1.0.0'
 }
 apply plugin: 'com.google.gms.google-services'

@@ -1,4 +1,4 @@
-package com.example.yoshi1125hisa.roastbeefapp;
+package com.developer.yoshi1125hisa.roastbeef;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.yoshi1125hisa.roastbeefapp", appContext.getPackageName());
+        assertEquals("com.developer.yoshi1125hisa.roastbeef", appContext.getPackageName());
     }
 }

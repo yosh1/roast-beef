@@ -1,4 +1,4 @@
-package com.example.yoshi1125hisa.roastbeefapp;
+package com.developer.yoshi1125hisa.roastbeef;
 
 import org.junit.Test;
 

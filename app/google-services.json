@@ -1,31 +1,31 @@
 {
   "project_info": {
-    "project_number": "119862946078",
-    "firebase_url": "https://digit-hackathon2018-niku29.firebaseio.com",
-    "project_id": "digit-hackathon2018-niku29",
-    "storage_bucket": "digit-hackathon2018-niku29.appspot.com"
+    "project_number": "451175163287",
+    "firebase_url": "https://roastbeef-2cdad.firebaseio.com",
+    "project_id": "roastbeef-2cdad",
+    "storage_bucket": "roastbeef-2cdad.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:119862946078:android:2db732211f01191f",
+        "mobilesdk_app_id": "1:451175163287:android:c76caafdf17f00ed",
         "android_client_info": {
-          "package_name": "com.example.yoshi1125hisa.roastbeefapp"
+          "package_name": "com.developer.yoshi1125hisa.roastbeef"
         }
       },
       "oauth_client": [
         {
-          "client_id": "119862946078-mfc7h53enrahqqi2lq7hg10m6fgech6c.apps.googleusercontent.com",
+          "client_id": "451175163287-7abh368ivfro0s29qbvdc833lbsqkr5d.apps.googleusercontent.com",
           "client_type": 3
         },
         {
-          "client_id": "119862946078-mfc7h53enrahqqi2lq7hg10m6fgech6c.apps.googleusercontent.com",
+          "client_id": "451175163287-7abh368ivfro0s29qbvdc833lbsqkr5d.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyARdaYGAkGBDD8i1n0cQalO_mPpDG_O1kY"
+          "current_key": "AIzaSyDhJyl6ezOOpExtDKijY4aZdAVc8ZCswlc"
         }
       ],
       "services": {

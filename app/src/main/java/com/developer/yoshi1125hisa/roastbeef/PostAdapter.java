@@ -1,4 +1,4 @@
-package com.example.yoshi1125hisa.roastbeefapp;
+package com.developer.yoshi1125hisa.roastbeef;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import com.developer.yoshi1125hisa.roastbeefapp.R;
 
 import java.util.List;
 
@@ -40,16 +42,17 @@ public class PostAdapter extends ArrayAdapter<Post> {
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.listview_item_post, parent, false);
 
                 viewHolder = new ViewHolder();
- //               viewHolder.usernameText = convertView.findViewById(R.id.username);
+              viewHolder.telNumText = convertView.findViewById(R.id.telNum);
               convertView.setTag(viewHolder);
             }
 
-           // viewHolder.dpiXText.setText(item.getDpiX());
+            viewHolder.telNumText.setText(item.getTelNum());
 
             return convertView;
         }
     static class ViewHolder{
 
-   //     TextView dpiXText;
+    TextView telNumText;
    }
 }
+
