@@ -1,27 +1,31 @@
 {
   "project_info": {
-    "project_number": "587716053157",
-    "firebase_url": "https://niku29niku-a0527.firebaseio.com",
-    "project_id": "niku29niku-a0527",
-    "storage_bucket": "niku29niku-a0527.appspot.com"
+    "project_number": "451175163287",
+    "firebase_url": "https://roastbeef-2cdad.firebaseio.com",
+    "project_id": "roastbeef-2cdad",
+    "storage_bucket": "roastbeef-2cdad.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:587716053157:android:c76caafdf17f00ed",
+        "mobilesdk_app_id": "1:451175163287:android:c76caafdf17f00ed",
         "android_client_info": {
           "package_name": "com.developer.yoshi1125hisa.roastbeef"
         }
       },
       "oauth_client": [
         {
-          "client_id": "587716053157-oqcd22l6h95dd7tvo19n6ptldq6v5u0i.apps.googleusercontent.com",
+          "client_id": "451175163287-7abh368ivfro0s29qbvdc833lbsqkr5d.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "451175163287-7abh368ivfro0s29qbvdc833lbsqkr5d.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyATTN42Y1mltNpZS_25HEFC39EIw5KHX4c"
+          "current_key": "AIzaSyDhJyl6ezOOpExtDKijY4aZdAVc8ZCswlc"
         }
       ],
       "services": {
